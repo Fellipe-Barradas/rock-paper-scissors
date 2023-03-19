@@ -11,23 +11,44 @@
 <body>
     <div>
         <h1>Prepare-se para a partida</h1>
-        <h2>Antes leia as regras e siga em frente:</h2>
+        <h3>Antes leia as regras e siga em frente:</h3>
         <ul>
             <li>Não pode roubar(mesmo que não consiga).</li>
             <li>Após ter escolhido sua arma, inicie a contagem.</li>
             <li>Não a uma recompensa pela vitória, faltou orçamento.</li>
             <li>Que sua batalha seja gloriosa!</li>
         </ul>
+        <button>Entendi as regras</button>
     </div>
-    <main>
+    <div id="content">
+      <main>
         <h1>Escolha sua arma!</h1>
-        <h2>Quando estiver preparado, inicie a contagem...</h2>
-        <main>
-
-        </main>
-        <button>Iniciar contagem </button>
-    </main>
-    
+        <h3>Quando estiver preparado, inicie a contagem...</h3>
+        <form action="a">
+            <label for="wepown">Arma:</label>
+            <select name="" id="weponw">
+                <option value="scissors">Tesoura</option>
+                <option value="rock">Pedra</option>
+                <option value="paper">Papel</option>
+            </select>
+            <input type="submit" value="Iniciar" id="submit">
+        </form>
+        <div class="game-screen">
+            <div>
+                <p>Esperando escolha...</p>
+            </div>
+            <div id="versus">
+                <p>VS</p>
+            </div>
+            <div>
+                <p>Escolha do inimigo...</p>
+            </div>
+        </div>
+        <div class="score-board">
+            <p>Points:</p><p id="score">0</p>
+        </div>
+      </main>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
