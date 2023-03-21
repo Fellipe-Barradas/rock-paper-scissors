@@ -10,12 +10,11 @@ form.addEventListener('submit', (e)=>{
 })
 //Função que será executada após iniciar o jogo
 const startGame = (weapown)=>{
-        
         showWeapown(weapown, "player")
-        //Contagem de 3s
-        //Sortear uma escolha para o computador
         //Aparecer a arma do inimigo na tela
+        const enemy = enemyChoice()
         //Verificar se o player ganhou
+
         //Notificação se o player ganhou
         //Adicionar Pontos no score
 }
@@ -36,6 +35,16 @@ const showWeapown = (arma, player)=>{
                 playerScreen.style.backgroundImage = "url('imgs/paper.png')"
                 break
         }
+        
     }
+}
+//Sortear uma escolha para o computador
+const enemyChoice = ()=>{
+    const weapons = ["paper", "scissors", "rock"]
+    const escolha = weapons[Math.floor(Math.random()* weapons.length)]
+    return escolha
+}
 
+const isWinning = (player, enemy)=>{
+    return (player === 'paper' && enemy === 'rock') || (player === 'scissors' && enemy === 'paper') || (player === 'rock' && enemy === 'scissors')
 }
